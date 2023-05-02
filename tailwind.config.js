@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "login-bg": "url('http://localhost:3000/background.jpg')"
+        "login-bg": "url('https://blog-website-olive.vercel.app/background.jpg')"
       }
     },
   },

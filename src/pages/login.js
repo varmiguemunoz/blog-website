@@ -30,7 +30,7 @@ const Login = ({setIsAuth}) => {
                 <div class="flex-1">
                     <div class="text-center">
                         <div class="flex justify-center mx-auto ">
-                            <img class="w-20 object-cover rounded-full shadow-lg h-20 sm:h-20" src="http://localhost:3000/icon.png" alt="icon" />
+                            <img class="w-20 object-cover rounded-full shadow-lg h-20 sm:h-20" src="https://blog-website-olive.vercel.app/icon.png" alt="icon" />
                         </div>
                         <p class="mt-3 font-medium text-gray-500">Access your account</p>
                     </div>
