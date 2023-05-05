@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { db, auth } from "../services/firebase";
+import { db, auth } from "../../services/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +36,6 @@ const CreatePost = ({ isAuth }) => {
     <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
         <h2 class="text-lg font-semibold text-gray-700 capitalize">Create you own post!</h2>
 
-    
         <div class="grid justify-center item-center grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
                 <label class="text-gray-700">Title</label>
@@ -53,7 +52,7 @@ const CreatePost = ({ isAuth }) => {
         <div class="flex justify-end mt-6">
             <button class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" onClick={createPost}>Save</button>
         </div>
-    
+
 </section>
 </div>
     )

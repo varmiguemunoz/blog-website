@@ -1,6 +1,7 @@
 import {getDocs, collection, deleteDoc, doc} from "firebase/firestore"
 import { useEffect, useState } from "react";
-import { auth, db } from "../services/firebase";
+import { auth, db } from "../../services/firebase";
+import ArticleButton from "../articles/articlebutton";
 
 const Home = ({isAuth}) => {
     const [post, setPost] = useState([]);
@@ -21,7 +22,7 @@ const Home = ({isAuth}) => {
 
     renderNewPost();
 
-    }, [])
+    }, [postCollectionRef])
 
     return (
         <>
@@ -37,6 +38,7 @@ const Home = ({isAuth}) => {
 		<p className="mb-3 text-gray-500 font-medium">{newpost.description}</p>
 	</div>
        {isAuth && newpost.author.id === auth.currentUser.uid && ( <button onClick={() => deletePost(newpost.id)} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Delete</button> )}
+       <ArticleButton id={newpost.id}/>
     </article>
             ))}
         </>
